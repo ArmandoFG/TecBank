@@ -7,6 +7,26 @@
     android:background="@drawable/fondoprincipal"
     tools:context=".actividad_movimientos">
 
+    <Button
+        android:id="@+id/Bmovs"
+        android:layout_width="151dp"
+        android:layout_height="46dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="340dp"
+        android:background="#58BD57"
+        android:onClick="Ini_Principal"
+        android:text="Ver movimientos"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.2" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -20,4 +40,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@android:drawable/ic_menu_revert"
         app:title="Movimientos" />
+
+    <TextView
+        android:id="@+id/textmov1"
+        android:layout_width="389dp"
+        android:layout_height="66dp"
+        android:drawableTint="#FFFFFF"
+        android:text="TextView"
+        android:textColor="#FDF2F2"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="89dp" />
+
+    <TextView
+        android:id="@+id/textmov2"
+        android:layout_width="389dp"
+        android:layout_height="66dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="182dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
