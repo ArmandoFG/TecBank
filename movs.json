@@ -1,0 +1,16 @@
+[
+    {
+        "numtran": 1,
+        "monto": 800,
+        "tipo": "Deposito",
+        "descripcion": "cuentas",
+        "fecha": "10may2021"
+    },
+    {
+        "numtran": 2,
+        "monto": 24000,
+        "tipo": "Retiro",
+        "descripcion": "cuentas",
+        "fecha": "11may2021"
+    }
+]
