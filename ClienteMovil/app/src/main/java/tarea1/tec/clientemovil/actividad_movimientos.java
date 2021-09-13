@@ -55,7 +55,8 @@ public class actividad_movimientos extends AppCompatActivity {
     }
     private void find(String id)
     {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.2:8081/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.5:8081/")
+        //Retrofit retrofit = new Retrofit.Builder().baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         MovimientoAPI movimientoAPI=retrofit.create(MovimientoAPI.class);
@@ -65,10 +66,12 @@ public class actividad_movimientos extends AppCompatActivity {
             public void onResponse(Call<Movimiento> call, Response<Movimiento> response) {
                 try
                 {
+                    Toast.makeText(actividad_movimientos.this, "res"+response.body().getDescripcion(), Toast.LENGTH_SHORT).show();
                     if(response.isSuccessful()){
+                        //Toast.makeText(actividad_movimientos.this, "conectado", Toast.LENGTH_SHORT).show();
                         Movimiento m=response.body();
-                        textmov1.setText(m.getNumTransaccion().toString());
-                        textmov2.setText(m.getMonto().toString());
+                        textmov1.setText("1     numero Transaccion: "+m.getNumtran());
+                        textmov2.setText("1     monto: "+m.getMonto());
                     }
 
                 }catch (Exception ex){

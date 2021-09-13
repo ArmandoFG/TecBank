@@ -1,49 +1,49 @@
 package tarea1.tec.clientemovil.models;
 
 public class Movimiento {
-    private String NumTransaccion;
-    private String Monto;
-    //private String Tipo;
-    //private String Descripcion;
-    //private String[] Fecha;
+    private int numtran;
+    private int monto;
+    private String tipo;
+    private String descripcion;
+    private String fecha;
 
-    public String getNumTransaccion() {
-        return NumTransaccion;
+    public int getNumtran() {
+        return numtran;
     }
 
-    public void setNumTransaccion(String numTransaccion) {
-        NumTransaccion = numTransaccion;
+    public void setNumtran(int numtran) {
+        this.numtran = numtran;
     }
 
-    public String getMonto() {
-        return Monto;
+    public int getMonto() {
+        return monto;
     }
 
-    public void setMonto(String monto) {
-        Monto = monto;
+    public void setMonto(int monto) {
+        this.monto = monto;
     }
 
-    /*public String getTipo() {
-        return Tipo;
+    public String getTipo() {
+        return tipo;
     }
 
     public void setTipo(String tipo) {
-        Tipo = tipo;
+        this.tipo = tipo;
     }
 
     public String getDescripcion() {
-        return Descripcion;
+        return descripcion;
     }
 
     public void setDescripcion(String descripcion) {
-        Descripcion = descripcion;
+        this.descripcion = descripcion;
     }
 
-    public String[] getFecha() {
-        return Fecha;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setFecha(String[] fecha) {
-        Fecha = fecha;
-    }*/
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 }

@@ -48,8 +48,10 @@
         android:drawableTint="#FFFFFF"
         android:text="TextView"
         android:textColor="#FDF2F2"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="89dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textmov2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/textmov2"
@@ -57,6 +59,8 @@
         android:layout_height="66dp"
         android:text="TextView"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="182dp" />
+        app:layout_constraintBottom_toTopOf="@+id/Bmovs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
