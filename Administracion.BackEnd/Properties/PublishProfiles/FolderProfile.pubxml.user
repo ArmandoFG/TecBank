@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\APIparaIIS</_PublishTargetUrl>
-    <History>True|2021-09-12T23:58:45.6049516Z;True|2021-09-12T16:33:24.3378789-06:00;True|2021-09-12T15:38:15.1057199-06:00;True|2021-09-07T12:29:05.9247590-06:00;True|2021-09-07T12:07:08.2602734-06:00;True|2021-09-07T01:42:37.2552630-06:00;</History>
+    <History>True|2021-09-14T00:18:38.7864703Z;True|2021-09-13T17:35:26.5663668-06:00;True|2021-09-13T17:23:38.1597711-06:00;True|2021-09-13T15:19:05.4582897-06:00;True|2021-09-12T17:58:45.6049516-06:00;True|2021-09-12T16:33:24.3378789-06:00;True|2021-09-12T15:38:15.1057199-06:00;True|2021-09-07T12:29:05.9247590-06:00;True|2021-09-07T12:07:08.2602734-06:00;True|2021-09-07T01:42:37.2552630-06:00;</History>
   </PropertyGroup>
 </Project>

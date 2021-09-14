@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ysjHz9v3GRw+pALqYXjG+egcy0kFOYxHoehPO7C2dS+sMFJqEzQu0YQx16AX0vss+VXXQPgDxEfIm7ht70R2FA==",
+  "dgSpecHash": "5zf00ign06Dr7L9p7Gc52kv3nvuICEtWwrTx9s4JstjiDXlHaRqRBCHV4S/im0FIlq6TkgD0WU3eU5Ak9AkVNg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hrlds\\Documents\\GitHub\\Pruebas bien prronas\\Administracion.BackEnd\\Administracion.BackEnd.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hrlds\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

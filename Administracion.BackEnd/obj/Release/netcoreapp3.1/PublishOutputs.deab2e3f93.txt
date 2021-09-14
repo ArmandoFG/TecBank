@@ -37,7 +37,10 @@ C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\Controllers\appsettings.json
+C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\Controllers\movsj.json
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\Administracion.BackEnd.dll
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\Administracion.BackEnd.deps.json
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\Administracion.BackEnd.runtimeconfig.json
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\Administracion.BackEnd.pdb
+C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll

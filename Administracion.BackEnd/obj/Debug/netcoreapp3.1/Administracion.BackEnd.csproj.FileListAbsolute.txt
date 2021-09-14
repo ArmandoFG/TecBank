@@ -21,3 +21,6 @@ C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Debug\netcoreapp3.1\Administracion.BackEnd.pdb
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Debug\netcoreapp3.1\Administracion.BackEnd.genruntimeconfig.cache
 C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\obj\Debug\netcoreapp3.1\Administracion.BackEnd.csproj.CopyComplete
+C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\bin\Debug\netcoreapp3.1\Controllers\appsettings.json
+C:\Users\hrlds\Documents\GitHub\Pruebas bien prronas\Administracion.BackEnd\bin\Debug\netcoreapp3.1\Controllers\movsj.json

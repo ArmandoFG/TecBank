@@ -1,0 +1,16 @@
+[
+    {
+    "numtran": 1,
+    "monto": 14141,
+    "tipo": "Retiro",
+    "descripcion": "cuentas",
+    "fecha": "11may2021"
+    },
+    {
+    "numtran": 3,
+    "monto": 14141,
+    "tipo": "Retiro",
+    "descripcion": "cuentas",
+    "fecha": "11may2021"
+    }
+]

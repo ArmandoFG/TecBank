@@ -15,14 +15,34 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginBottom="36dp"
         android:background="#58BD57"
         android:onClick="Ini_Principal"
         android:text="Ver movimientos"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/Consulta"
+        android:layout_width="118dp"
+        android:layout_height="46dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="112dp"
+        android:background="#58BD57"
+        android:onClick="Ini_Principal"
+        android:text="Consultar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.2" />
@@ -43,24 +63,29 @@
 
     <TextView
         android:id="@+id/textmov1"
-        android:layout_width="389dp"
-        android:layout_height="66dp"
+        android:layout_width="349dp"
+        android:layout_height="482dp"
         android:drawableTint="#FFFFFF"
+        android:isScrollContainer="false"
+        android:scrollbars="vertical"
         android:text="TextView"
         android:textColor="#FDF2F2"
-        app:layout_constraintBottom_toTopOf="@+id/textmov2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-    <TextView
-        android:id="@+id/textmov2"
-        android:layout_width="389dp"
-        android:layout_height="66dp"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/Bmovs"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/TextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/Bmovs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Consulta"
+        app:layout_constraintTop_toBottomOf="@+id/textmov1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

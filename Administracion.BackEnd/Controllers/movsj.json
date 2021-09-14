@@ -1,21 +1,21 @@
 [
   {
     "Numtran": 1,
-    "Monto": 8888,
-    "Tipo": "Retiro",
-    "Descripcion": "cuentas",
-    "fecha": "10may2021"
-  },
-  {
-    "Numtran": 2,
-    "Monto": 24000,
+    "Monto": 14141,
     "Tipo": "Retiro",
     "Descripcion": "cuentas",
     "fecha": "11may2021"
   },
   {
-    "Numtran": 7,
-    "Monto": 5550,
+    "Numtran": 3,
+    "Monto": 14141,
+    "Tipo": "Retiro",
+    "Descripcion": "cuentas",
+    "fecha": "11may2021"
+  },
+  {
+    "Numtran": 3,
+    "Monto": 14141,
     "Tipo": "Retiro",
     "Descripcion": "cuentas",
     "fecha": "11may2021"

@@ -1,9 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Permissions;
+
 using System.Threading.Tasks;
+
 
 namespace Administracion.BackEnd.Controllers
 {
@@ -11,34 +16,57 @@ namespace Administracion.BackEnd.Controllers
     [ApiController]
     public class MovimientoController : ControllerBase
     {
-        /*int[] t1 = new int[] { 1021, 450000, };
-        int[] t2 = new int[] { 1022, 32000 };*/
+        private static string _path = @"Controllers/movsj.json";
+        
+
         [HttpGet("ObtenerMov")]
         public List<Model.Mov> Get()
         {
-
-            var movs = GetMovs();
+            var movs = GetMovsJsonFromFile();
+            //var movs = GetMovs();
             return movs;
-            
+
         }
         [HttpGet("ObtenerMov/{id}")]
         public Model.Mov Getm(int id)
         {
 
-            var movs = GetMovs();
-            foreach (Model.Mov mov in movs){
-                if (id == mov.Numtran) 
+            var movs = GetMovsJsonFromFile();
+            foreach (Model.Mov mov in movs) {
+                if (id == mov.Numtran)
                 {
                     return mov;
                 }
             };
             return null;
-            
+
+        }
+
+        [HttpPost("addmov")]    
+        public int addmovimiento(Model.Mov mov) 
+        {
+
+            string movsFromFile;
+            using (var reader = new StreamReader(_path))
+            {
+                movsFromFile = reader.ReadToEnd();
+            }
+
+            var movs = JsonConvert.DeserializeObject<List<Model.Mov>>(movsFromFile);
+
+            movs.Add(mov);
+
+            string movsJson = JsonConvert.SerializeObject(movs.ToArray(), Formatting.Indented);
+
+            System.IO.File.WriteAllText(_path, movsJson);
+
+            return 1;
         }
 
 
         public static List<Model.Mov> GetMovs() 
         {
+            
             List<Model.Mov> movimientos = new List<Model.Mov> {
                 new Model.Mov
                 {
@@ -61,6 +89,20 @@ namespace Administracion.BackEnd.Controllers
                 };
             return movimientos;
         }
+
+        public static List<Model.Mov> GetMovsJsonFromFile() 
+        {
+            string movsFromFile;
+            using (var reader = new StreamReader(_path)) 
+            {
+                movsFromFile = reader.ReadToEnd();
+            }
+
+            var movs = JsonConvert.DeserializeObject<List<Model.Mov>>(movsFromFile);
+            return movs;
+
+        }
+
 
     }
 }
