@@ -22,6 +22,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import tarea1.tec.clientemovil.interfaces.UnMovimientoAPI;
 import tarea1.tec.clientemovil.models.Movimiento;
 
+/**
+ * Clase de la pantalla de transferencias
+ * @author Armando Fallas
+ * @author Harold Espinoza
+ *
+ * */
 public class actividad_transferencia extends AppCompatActivity {
 
     Button btnTrans;
@@ -29,6 +35,9 @@ public class actividad_transferencia extends AppCompatActivity {
     EditText TextDetalle;
     int nTrans = 0;
 
+    /**
+     * Metodo que inicializa la actividad, es decir, la interfaz
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
@@ -54,6 +63,11 @@ public class actividad_transferencia extends AppCompatActivity {
             }
         });
     }
+    /**
+     * Metodo encargado de enviar un movimiento al API
+     * @param detalle descripcion del movimiento realizado
+     * @param monto cantidad del monto realizado
+     * */
     public void send(int monto, String detalle)
     {
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.5:8081/")
@@ -61,12 +75,13 @@ public class actividad_transferencia extends AppCompatActivity {
         UnMovimientoAPI UnmovimientoAPI=retrofit.create(UnMovimientoAPI.class);
 
         nTrans++;
+
+        //Construccion del objeto movimiento
+
         Movimiento mov = new Movimiento();
         mov.setNumtran(nTrans);
         mov.setDescripcion(detalle);
         mov.setMonto(monto);
-        //java.util.Date fecha = new Date();
-        //String date = Integer.toString(fecha.getDay())+Integer.toString(fecha.getMonth())+Integer.toString(fecha.getYear());
         Calendar c = Calendar.getInstance();
         String dia = Integer.toString(c.get(Calendar.DATE));
         String mes = Integer.toString(c.get(Calendar.MONTH));

@@ -9,7 +9,11 @@ using System.Security.Permissions;
 
 using System.Threading.Tasks;
 
-
+/*
+ * Controlador de los movimientos
+ * @author Harold Espinoza
+ * 
+ */
 namespace Administracion.BackEnd.Controllers
 {
     [Route("api/[controller]")]
@@ -19,6 +23,10 @@ namespace Administracion.BackEnd.Controllers
         private static string _path = @"Controllers/movsj.json";
         
 
+        /**
+         * Metodo de tipo Get para obtener una lista de todos los movimientos realizados
+         * @return movs Lista de movimientos
+         */
         [HttpGet("ObtenerMov")]
         public List<Model.Mov> Get()
         {
@@ -27,6 +35,13 @@ namespace Administracion.BackEnd.Controllers
             return movs;
 
         }
+
+        /**
+         * Metodo de tipo Get que obtiene un movimiento especifico segun el numero de transaccion
+         * @param id numero de la transaccion que se busca
+         * @return mov movimiento que se solicito
+         * @return null en caso de no encontrar el movimiento
+         */
         [HttpGet("ObtenerMov/{id}")]
         public Model.Mov Getm(int id)
         {
@@ -42,6 +57,11 @@ namespace Administracion.BackEnd.Controllers
 
         }
 
+        /**
+         * Metodo de tipo Post que se encarga de introducir un nuevo movimiento
+         * @param mov Recibe un obtejo de tipo movimiento que se desea incluir
+         * 
+         */
         [HttpPost("addmov")]    
         public int addmovimiento(Model.Mov mov) 
         {
@@ -64,6 +84,11 @@ namespace Administracion.BackEnd.Controllers
         }
 
 
+        /**
+         * Metodo que crea una lista de objetos de tipo movimiento
+         * El metodo tiene como fin usarse para pruebas sin necesidad de leer un archivo o incluir una base de datos
+         * @return movimientos Una lista de movimientos predeterminada
+         */
         public static List<Model.Mov> GetMovs() 
         {
             
@@ -90,6 +115,10 @@ namespace Administracion.BackEnd.Controllers
             return movimientos;
         }
 
+        /**
+         * Metodo que realiza la lectura de un archivo json para obtener la lista de movimientos
+         * @return movs Lista de movimientos leidos
+         */
         public static List<Model.Mov> GetMovsJsonFromFile() 
         {
             string movsFromFile;

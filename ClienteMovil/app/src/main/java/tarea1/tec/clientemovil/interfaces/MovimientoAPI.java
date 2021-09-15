@@ -9,9 +9,15 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 
+/**
+ * Interface para envio de solicitud al API
+ * @author Harold Espinoza
+ * */
+
 public interface MovimientoAPI {
-    //@GET("api/movimiento/obtenermov/{id}")
+    /**
+     * Metodo tipo Get para obtener todos los movimientos
+     * */
     @GET("api/movimiento/obtenermov")
-    //@GET("posts/{id}")
     public Call<List<Movimiento>> find();
 }

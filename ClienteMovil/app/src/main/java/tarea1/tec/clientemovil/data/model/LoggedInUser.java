@@ -1,7 +1,7 @@
 package tarea1.tec.clientemovil.data.model;
 
 /**
- * Data class that captures user information for logged in users retrieved from LoginRepository
+ * Clase que captura la informacion del usuario del repositorio de Login
  */
 public class LoggedInUser {
 

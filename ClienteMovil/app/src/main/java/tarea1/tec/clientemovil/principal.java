@@ -11,14 +11,25 @@ import android.view.View;
 
 import tarea1.tec.clientemovil.ui.login.LoginActivity;
 
+
+/**
+ * Clase para la pantalla principal de la aplicacion
+ * @author Armando Fallas
+ * */
 public class principal extends AppCompatActivity {
 
+    /**
+     * Metodo que inicializa la pantalla principal
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_principal);
     }
 
+    /**
+     * Metodo para salir de la ventana pricipal de la aplicacion
+     * */
     public void Salir(View view){
 
 
@@ -40,10 +51,16 @@ public class principal extends AppCompatActivity {
         SalirAlerta.setTitle ("Alerta");
         SalirAlerta.show ();
     }
+    /**
+     * Metodo que cambia la pantalla principal a la pantalla de movimientos
+     * */
     public void Ini_Movimiento(View view){
         Intent Registro = new Intent(this, actividad_movimientos.class);
         startActivity (Registro);
     }
+    /**
+     * Metodo que cambia la pantalla principal a la pantalla de transferencias
+     * */
     public void Ini_Transferencia(View view){
         Intent Registro = new Intent(this, actividad_transferencia.class);
         startActivity (Registro);

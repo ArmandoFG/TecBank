@@ -9,8 +9,16 @@ using System.Threading.Tasks;
 
 namespace Administracion.BackEnd
 {
+    /**
+     * Clase inicial para el API
+     * @author Harold Espinoza
+     */
     public class Program
     {
+
+        /**
+         * Metodo main de inicializacion
+         */
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

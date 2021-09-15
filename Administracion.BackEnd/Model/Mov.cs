@@ -5,6 +5,11 @@ using System.Threading.Tasks;
 
 namespace Administracion.BackEnd.Model
 {
+
+    /**
+     * Clase para definir los movimientos 
+     * @author Harold Espinoza
+     */
     public class Mov
     {
         public int Numtran { get; set; }

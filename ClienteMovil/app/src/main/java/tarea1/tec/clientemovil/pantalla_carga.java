@@ -7,8 +7,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import tarea1.tec.clientemovil.ui.login.LoginActivity;
 
+/**
+ * Clase para la pantalla de carga
+ * @author Armando Fallas
+ * */
 public class pantalla_carga extends AppCompatActivity {
 
+    /**
+     * Metodo que inicializa la interfaz
+     *
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);

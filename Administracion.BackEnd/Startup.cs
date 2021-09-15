@@ -10,6 +10,11 @@ using System.Threading.Tasks;
 
 namespace Administracion.BackEnd
 {
+    /**
+     * Clase inicializacion
+     * Se realiza la configuracion inicial del API
+     * @author Harold Espinoza 
+     */
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)

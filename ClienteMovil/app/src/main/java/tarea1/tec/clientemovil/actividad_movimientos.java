@@ -23,6 +23,12 @@ import tarea1.tec.clientemovil.interfaces.MovimientoAPI;
 import tarea1.tec.clientemovil.interfaces.UnMovimientoAPI;
 import tarea1.tec.clientemovil.models.Movimiento;
 
+/**
+ * Clase de la pantalla de movimientos
+ * @author Armando Fallas
+ * @author Harold Espinoza
+ *
+ * */
 public class actividad_movimientos extends AppCompatActivity {
 
     TextView textmov1;
@@ -30,7 +36,9 @@ public class actividad_movimientos extends AppCompatActivity {
     Button btnconsulta;
     EditText consultaId;
 
-
+    /**
+     * Metodo que inicializa la actividad, es decir, la interfaz
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
@@ -74,6 +82,11 @@ public class actividad_movimientos extends AppCompatActivity {
 
     }
 
+    /**
+     * Metodo que envia una solicitud tipo Get al API para obtener un movimiento a partir de su numero de transaccion
+     * @param id numero de la transaccion que se desea buscar
+     *
+     * */
     private void movimiento(String id)
     {
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.5:8081/")
@@ -101,7 +114,6 @@ public class actividad_movimientos extends AppCompatActivity {
                             listadoMovs += "\n";
 
 
-
                         textmov1.setText(listadoMovs);
 
                     }
@@ -119,6 +131,9 @@ public class actividad_movimientos extends AppCompatActivity {
     }
 
 
+    /**
+     * Metodo que envia una solicitud de tipo Get al API para obtener el listado de los movimientos de la cuenta
+     * */
     private void find()
     {
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.5:8081/")

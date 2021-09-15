@@ -12,8 +12,15 @@ import android.widget.EditText;
 
 import tarea1.tec.clientemovil.ui.login.LoginActivity;
 
+/**
+ * Clase para la pantalla de registro
+ * @author Armando Fallas
+ * */
 public class Registrarse extends AppCompatActivity {
 
+    /**
+     * Metodo que inicializa la pantalla de registro
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
@@ -38,6 +45,9 @@ public class Registrarse extends AppCompatActivity {
 
     }
 
+    /**
+     * Metodo que registra un nuevo usuario
+     * */
     public void boton_afiliar(View view){
         EditText contraseña1 = findViewById (R.id.contraseñaRegistro);
         EditText contraseña2 = findViewById (R.id.confirmarContraseña);
