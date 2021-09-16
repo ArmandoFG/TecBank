@@ -13,6 +13,7 @@ import { CrearClienteComponent } from './clients/crear-cliente/crear-cliente.com
 import { CrearRolComponent } from './roles/crear-rol/crear-rol.component';
 import { CrearCardComponent } from './cards/crear-card/crear-card.component';
 import { CrearAccountComponent } from './accounts/crear-account/crear-account.component';
+import { RetiroDepositoComponent } from './accounts/retiro-deposito/retiro-deposito.component';
 
 
 
@@ -27,7 +28,8 @@ import { CrearAccountComponent } from './accounts/crear-account/crear-account.co
     CrearClienteComponent,
     CrearRolComponent,
     CrearCardComponent,
-    CrearAccountComponent
+    CrearAccountComponent,
+    RetiroDepositoComponent
   ],
   imports: [
     BrowserModule,
