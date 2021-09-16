@@ -1,0 +1,14 @@
+.navbar
+{
+    background-color: gainsboro;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+    color: midnightblue;
+    font-size: 18x;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

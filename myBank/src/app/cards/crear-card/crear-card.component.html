@@ -1,0 +1,55 @@
+<div class="container">
+    <mat-toolbar>
+        <span>{{ titulo }}</span>
+    </mat-toolbar>
+
+    <mat-card style="margin-top: 10px;">
+        <form [formGroup]="form" (ngSubmit)="agregarEditarTarjeta()">
+            <mat-grid-list cols="4" rowHeight="50px">
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Numero de Tarjeta</mat-label>
+                        <input matInput autocomplete="off" formControlName="numero">
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="ancho">
+                        <mat-label>Fecha de Expiracion</mat-label>
+                        <input matInput autocomplete="off" formControlName="fecha"> 
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="ancho">
+                        <mat-label>Codigo de Seguridad</mat-label>
+                        <input matInput autocomplete="off" formControlName="codigo">
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Tipo de Tarjeta</mat-label>
+                        <mat-select formControlName="tipo">
+                          <mat-option *ngFor ="let item of tipo" [value]="item">
+                              {{item}}
+                          </mat-option>
+
+                        </mat-select>
+                      </mat-form-field>
+                    </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Saldo Disponible</mat-label>
+                        <input matInput autocomplete="off" formControlName="saldo">
+                      </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">ACEPTAR</button>
+                    <button mat-raised-button>VOLVER</button>
+                </mat-grid-tile>
+
+            </mat-grid-list>
+
+        </form>
+    </mat-card>
+
+</div>

@@ -1,0 +1,71 @@
+<div class="container">
+    <mat-toolbar>
+        <span>{{ titulo }}</span>
+    </mat-toolbar>
+
+    <mat-card style="margin-top: 10px;">
+        <form [formGroup]="form" (ngSubmit)="agregarEditarCliente()">
+            <mat-grid-list cols="4" rowHeight="50px">
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Nombre Completo</mat-label>
+                        <input matInput autocomplete="off" formControlName="nombre">
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Cedula</mat-label>
+                        <input matInput autocomplete="off" formControlName="cedula">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="ancho">
+                        <mat-label>Telefono</mat-label>
+                        <input matInput autocomplete="off" formControlName="telefono"> 
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="ancho">
+                        <mat-label>Direccion</mat-label>
+                        <input matInput autocomplete="off" formControlName="direccion">
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Tipo de Cliente</mat-label>
+                        <mat-select formControlName="tipoCliente">
+                          <mat-option *ngFor ="let item of tipo" [value]="item">
+                              {{item}}
+                          </mat-option>
+
+                        </mat-select>
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Ingreso Mensual</mat-label>
+                        <input matInput autocomplete="off" formControlName="ingreso">
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Usuario</mat-label>
+                        <input matInput autocomplete="off" formControlName="usuario">
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Password</mat-label>
+                        <input matInput autocomplete="off" formControlName="password">
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">GUARDAR</button>
+                    <button mat-raised-button>VOLVER</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+        </form>
+    </mat-card>
+
+</div>

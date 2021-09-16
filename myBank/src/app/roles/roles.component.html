@@ -1,0 +1,53 @@
+
+  <div class="container">
+    <mat-toolbar>
+        <span>Roles</span>
+        <div class="example-spacer"></div>
+        <button mat-raised-button color="primary" routerLink="/crear-rol">AGREGAR</button>
+    </mat-toolbar>
+
+    <div *ngIf="listRoles.length > 0">
+    <mat-form-field appearance="standard">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input autocomplete="off">
+    </mat-form-field>
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+            <!-- Position Column -->
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+              <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="descripcion">
+              <th mat-header-cell *matHeaderCellDef> Descripción </th>
+              <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="acciones">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element; let i = index" style="text-align: right;">
+                    <a class="pointer" style="color: green;" matTooltip="Ver Rol">
+                        <mat-icon>search</mat-icon>
+                    </a>
+                    <a class="pointer" 
+                        [routerLink]="['/edit-rol', element.nombre]" style="color:
+                         deepskyblue;" matTooltip="Editar Rol">
+                        <mat-icon>edit</mat-icon>
+                    </a>
+                    <a class="pointer" (click)="eliminarRol(i)" style="color: indianred;" matTooltip="Eliminar Rol">
+                        <mat-icon>delete</mat-icon>
+                    </a>
+                </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>    
+        </div>
+    </div>
+    <h2 *ngIf="listRoles.length == 0">No hay Roles para mostrar</h2>
+
+  </div>

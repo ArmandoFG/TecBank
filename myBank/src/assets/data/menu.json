@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "Clientes",
+        "redirect": "/clients"
+    },
+    {
+        "nombre": "Cuentas",
+        "redirect": "/accounts"
+    },
+    {
+        "nombre": "Tarjetas",
+        "redirect": "/cards"
+    },
+    {
+        "nombre": "Roles",
+        "redirect": "/roles"
+    },
+    {
+        "nombre": "Mora",
+        "redirect": "/mora"
+    }
+]

@@ -1,0 +1,30 @@
+<div class="container">
+    <mat-toolbar>
+        <span>{{titulo}}</span>
+    </mat-toolbar>
+
+    <mat-card style="margin-top: 10px;">
+        <form [formGroup]="form" (ngSubmit)="agregarEditarRol()">
+            <mat-grid-list cols="4" rowHeight="50px">
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput autocomplete="off" formControlName="nombre">
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="3" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Descripcion</mat-label>
+                        <input matInput autocomplete="off" formControlName="descripcion">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">ACEPTAR</button>
+                    <button mat-raised-button>VOLVER</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+        </form>
+    </mat-card>
+
+</div>

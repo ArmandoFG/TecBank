@@ -1,0 +1,58 @@
+<div class="container">
+    <mat-toolbar>
+        <span>{{ titulo }}</span>
+    </mat-toolbar>
+
+    <mat-card style="margin-top: 10px;">
+        <form [formGroup]="form" (ngSubmit)="agregarEditarCuenta()">
+            <mat-grid-list cols="4" rowHeight="50px">
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Numero de Cuenta</mat-label>
+                        <input matInput autocomplete="off" formControlName="numero">
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1" >
+                    <mat-form-field class="ancho">
+                        <mat-label>Descripcion</mat-label>
+                        <input matInput autocomplete="off" formControlName="descripcion"> 
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Tipo de Cuenta</mat-label>
+                        <mat-select formControlName="tipo">
+                          <mat-option *ngFor ="let item of tipoMoneda" [value]="item">
+                              {{item}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Tipo de Cuenta</mat-label>
+                        <mat-select formControlName="tipo">
+                          <mat-option *ngFor ="let item of tipo" [value]="item">
+                              {{item}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Cliente</mat-label>
+                        <input matInput autocomplete="off" formControlName="cliente">
+                      </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button type="submit" mat-raised-button color="primary">ACEPTAR</button>
+                    <button mat-raised-button>VOLVER</button>
+                </mat-grid-tile>
+
+            </mat-grid-list>
+
+        </form>
+    </mat-card>
+
+</div>
