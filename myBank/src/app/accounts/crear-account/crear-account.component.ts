@@ -10,6 +10,11 @@ import { AccountService } from 'src/app/services/account.service';
   templateUrl: './crear-account.component.html',
   styleUrls: ['./crear-account.component.css']
 })
+
+/**
+ * Clase para el componente de Crear Cuenta
+ * @author Carmen Araya
+ * */
 export class CrearAccountComponent implements OnInit {
 
   tipo: any[] = ['Ahorros', 'Corriente'];
@@ -18,6 +23,11 @@ export class CrearAccountComponent implements OnInit {
   titulo = 'Agregar Cuenta';
   id: string | null;
 
+  /**
+   * Metodo que constructor de la clase
+   * @param FormBuilder formulario para crear un elemento
+   *
+   * */
   constructor(private fb: FormBuilder, 
     private _cuentaService: AccountService,
     private router: Router,
@@ -32,10 +42,18 @@ export class CrearAccountComponent implements OnInit {
     this.id = this.aRoute.snapshot.paramMap.get("numero");
    }
 
+
+  /**
+  * Metodo que ejecuta otros metodos al correr la aplicación
+  * */
   ngOnInit(): void {
     this.esEditar();
   }
 
+
+  /**
+  * Metodo que ejecuta la accion editar o agregar segun una condicin
+  * */
   agregarEditarCuenta(){
     if (this.id == null){
       this.agregarCuenta();
@@ -44,6 +62,10 @@ export class CrearAccountComponent implements OnInit {
     }
   }
 
+  
+  /**
+  * Metodo que agrega una cuenta nueva al servicio y la carga en la tabla
+  * */
   agregarCuenta(){
     if(this.form.invalid){
       return;
@@ -59,6 +81,9 @@ export class CrearAccountComponent implements OnInit {
     this.router.navigate(['/accounts']);
   }
 
+  /**
+  * Metodo que edita una cuenta en el servicio y la actuliza en la tabla
+  * */ 
   editarCuenta(){
     const cuenta: Cuenta = {
       numero: this.form.value.numero,
@@ -71,6 +96,9 @@ export class CrearAccountComponent implements OnInit {
     this.router.navigate(['/accounts']);
   }
 
+  /**
+  * Metodo que obtiene los datos de una cuenta editada
+  * */
   esEditar(){
     if(this.id != null){
       this.titulo = "Editar Cuenta"
