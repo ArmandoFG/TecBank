@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PeticionCuenta } from 'src/app/services/peticioncuenta.service';
-
+/**
+  * @fileoverview Inicia la pagina para ver los movimientos
+  * que ha hecho una cuenta, los dato se obtienen del API
+  * @author Fatima Leiva
+  */
 
 @Component({
   selector: 'movimiento',
@@ -10,12 +14,18 @@ import { PeticionCuenta } from 'src/app/services/peticioncuenta.service';
 })
 export class MovimientoComponent implements OnInit {
   
-  movimientos: any[] = [];
+  movimientos: any[] = []; /**Guarda los datos que vienen del API */
+  /**@constructor */
   constructor(
     private _peticionesService: PeticionCuenta
   ) {
    }
-
+   /**
+    * Hace la peticion de los movimientos al API
+    * apenas se inicia la pagina
+    * Si se obtiene un error lo imprime en pantalla y
+    * por lo tanto no carga ningún movimiento
+    */
   ngOnInit(): void {
 
     this._peticionesService.getMovimiento().subscribe(
