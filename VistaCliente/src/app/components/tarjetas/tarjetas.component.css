@@ -1,0 +1,81 @@
+.contenedor-info{
+    text-align: center;
+  background-color: #ffffff;
+  border: transparent;
+  position: relative;
+  top: 40px;
+  left: 60px;
+  margin-left: 500px;
+  margin-right: 500px;
+  box-shadow: 15px 15px 55px #445d80;
+  width: 400px;
+  height: 250px;
+
+  box-sizing: border-box;
+  padding: 60px 0;
+  border-radius: 10px;
+
+}
+
+.main-container {
+  background-color: #125dc0b0;
+  box-sizing: border-box;
+  padding: 130px 0
+  
+}
+
+.button-bank {
+    background-color: #125ec0;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    
+    float: left;
+    align-items: center;
+    
+  }
+
+.button-bank:hover {opacity: 1}
+
+.buttons-cuentas {
+  position: relative;
+  left: -65px;
+  top: 30px;
+  margin-left: 600px;
+  margin-right: 300px;
+}
+
+#numero {
+  text-decoration: underline;
+  text-shadow: 2px 2px 10px #689bdf;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#descripcion {
+  font-style: italic;
+}
+
+.button-back {
+    background-color: #125ec0;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    
+    float: left;
+    align-items: center;
+    
+  }
+
+.button-back:hover {opacity: 1}

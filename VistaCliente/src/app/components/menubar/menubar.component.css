@@ -1,0 +1,45 @@
+#logoicon {
+    height: 4%;
+    width: 4%;
+    position: relative;
+    right: 980px;
+}
+
+#tectext{
+    position: relative;
+    right: 960px;
+    top: 20px;
+    color: rgb(109, 109, 109);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    
+    text-decoration: rgb(221, 216, 170);
+    text-shadow: lightcoral;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(51, 51, 51);
+    box-sizing: border-box;
+    padding: 10px 0
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }

@@ -1,0 +1,28 @@
+<menubar></menubar>
+
+<div>
+    <form action="/action_page.php">
+      <label for="monto">Monto a transferir</label>
+      <input (keyup)="onKey($event)" type="number" id="monto" name="monto" placeholder="Monto"
+      #name="ngModel" [(ngModel)]= transaction_monto>
+  
+  
+      <label for="moneda">Moneda</label>
+      <select  id="moneda" name="moneda" [(ngModel)]="selectedOption">
+        <option *ngFor="let o of options">
+            {{o.name}}
+        </option>
+
+      </select>
+
+      <label for="concepto">Concepto</label>
+      <input type="text" id="concepto" name="lastname" placeholder="Concepto"
+      #name="ngModel" [(ngModel)]= new_transaction.descripcion>
+
+      <label for="cuenta">Cuenta a acreditar</label>
+      <input (keyup)="onKey2($event)" type="text" id="cuenta" name="cuenta" placeholder="Cuenta">
+    
+      <input (click)="submitInfo()" type="button" value="Submit">
+
+    </form>
+  </div>

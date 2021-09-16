@@ -1,0 +1,24 @@
+<menubar></menubar>
+<div class= "main-container">
+    <mat-accordion>
+    <mat-expansion-panel *ngFor="let value of movimientos">
+		<mat-expansion-panel-header>
+			<h3 id= 'numtran'> Número de transacción: {{value.numtran}}</h3>
+            
+      
+		</mat-expansion-panel-header>
+      <p>Monto: {{value.monto}}</p>
+      <p>Fecha: {{value.fecha}}</p>
+      <p>Tipo: {{value.tipo}}</p>
+      <p id= 'descripcion'>Descripción: {{value.descripcion}}</p>
+	</mat-expansion-panel>
+
+</mat-accordion>
+
+  </div>
+  <div>
+    <div class="buttons-cuentas">
+        <p><button class="button-back" [routerLink]="['/terminal']"><b>« Volver</b></button></p>
+    </div>
+  </div>
+

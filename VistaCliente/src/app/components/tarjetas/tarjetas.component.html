@@ -1,0 +1,21 @@
+<menubar></menubar>
+<div class= "main-container">
+    <mat-accordion>
+    <mat-expansion-panel *ngFor="let value of tarjetas">
+		<mat-expansion-panel-header>
+			<h3 id= 'numero'> Número de tarjeta: {{value.numero}}</h3>
+            
+		</mat-expansion-panel-header>
+      <p>Saldo disponible: {{value.saldo}}</p>
+      <p>Fecha expiración: {{value.fechaexp}}</p>
+      <p>Tipo: {{value.tipo}}</p>
+	</mat-expansion-panel>
+
+</mat-accordion>
+
+  </div>
+  <div>
+    <div class="buttons-cuentas">
+        <p><button class="button-back" [routerLink]="['/terminal']"><b>« Volver</b></button></p>
+    </div>
+  </div>
