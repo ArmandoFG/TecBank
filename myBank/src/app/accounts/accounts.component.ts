@@ -13,6 +13,12 @@ import { CrearAccountComponent } from './crear-account/crear-account.component';
   templateUrl: './accounts.component.html',
   styleUrls: ['./accounts.component.css']
 })
+
+
+/**
+ * Clase para el componente de la Cuenta
+ * @author Carmen Araya
+ * */
 export class AccountsComponent implements OnInit {
 
   listCuentas: Cuenta[] = [];
@@ -22,28 +28,50 @@ export class AccountsComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
+  /**
+   * Metodo que constructor de la clase
+   * @param AccountService Servicio de Cuenta
+   *
+   * */
   constructor(private _cuentaService: AccountService) { 
   }
+
+  /**
+  * Metodo que ejecuta otros metodos al correr la aplicación
+  * */
   ngOnInit(): void {
     this.cargarCuentas();
   }
 
-
+  /**
+  * Metodo que carga las cuentas que existen en el servicio y las muestra en la tabla
+  * */
   cargarCuentas(){
     this.listCuentas = this._cuentaService.getCuenta();
     this.dataSource = new MatTableDataSource(this.listCuentas)
   }
 
+  /**
+   * Metodo para realizar la busqueda por nombre de los elementos de la tabla
+  * */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  /**
+   * Metodo para realizar el ordenamiento de la tabla
+  * */
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
 
+  /**
+  * Metodo que elimina un elemento del Servicio y recarga los elementos de la tabla
+  * @param index indice del elemento a eliminar
+  *
+  * */
   eliminarCuenta(index: number){
     console.log(index);
 
