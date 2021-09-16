@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-
+/**
+  * @fileoverview Carga las tarjetas que se encuentran
+  * asociadas a una cuenta en una tabla expandible
+  * @author Fatima Leiva
+  */
 @Component({
   selector: 'tarjetas',
   templateUrl: './tarjetas.component.html',
   styleUrls: ['./tarjetas.component.css']
 })
 export class TarjetasComponent implements OnInit {
-  tarjetas: any[] = [];
+  tarjetas: any[] = []; /**Almacena las tarjetas en una lista */
+  /**@constructor */
   constructor() { }
 
+/**Inicializa las tarjetas con su respectiva informacion*/
   ngOnInit(): void {
     this.tarjetas= 
       [
