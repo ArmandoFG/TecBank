@@ -11,6 +11,11 @@ import { ClienteService } from 'src/app/services/cliente.service';
   templateUrl: './crear-cliente.component.html',
   styleUrls: ['./crear-cliente.component.css']
 })
+
+/**
+ * Clase para el componente de Crear Cliente
+ * @author Carmen Araya
+ * */
 export class CrearClienteComponent implements OnInit {
 
   tipo: any[] = ['Fisico', 'Juridico' ]
@@ -19,6 +24,13 @@ export class CrearClienteComponent implements OnInit {
   titulo = "Agregar Empleado";
 
 
+  /**
+   * Metodo que constructor de la clase
+   * @param FormBuilder formulario para crear un elemento
+   * @param ClienteService Servicio del Cliente
+   * @param router 
+   * @param ActivatedRoute 
+   * */
   constructor(private fb: FormBuilder, 
     private _clienteService: ClienteService,
     private router: Router,
@@ -36,10 +48,16 @@ export class CrearClienteComponent implements OnInit {
     this.id = this.aRoute.snapshot.paramMap.get("cedula");
    }
 
+  /**
+  * Metodo que ejecuta otros metodos al correr la aplicación
+  * */  
   ngOnInit(): void {
     this.esEditar();
   }
 
+  /**
+  * Metodo que ejecuta la accion editar o agregar segun una condicin
+  * */
   agregarEditarCliente(){
     if (this.id == null){
       this.agregarCliente();
@@ -48,6 +66,9 @@ export class CrearClienteComponent implements OnInit {
     }
   }
 
+  /**
+  * Metodo que agrega un cliente nuevo al servicio y la carga en la tabla
+  * */
   agregarCliente(){
     if(this.form.invalid){
       return;
@@ -66,6 +87,9 @@ export class CrearClienteComponent implements OnInit {
     this.router.navigate(['/clients']);
   }
 
+  /**
+  * Metodo que edita un cliente en el servicio y la actuliza en la tabla
+  * */ 
   editarEmpleado(){
     const client: Cliente = {
       nombre: this.form.value.nombre,
@@ -81,6 +105,9 @@ export class CrearClienteComponent implements OnInit {
     this.router.navigate(['/clients']);
   }
 
+  /**
+  * Metodo que obtiene los datos de una cuenta editada
+  * */ 
   esEditar(){
     if(this.id != null){
       this.titulo = "Editar Empleado"

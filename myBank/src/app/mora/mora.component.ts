@@ -23,28 +23,48 @@ export class MoraComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
+  /**
+   * Metodo que constructor de la clase
+   * @param ClienteService Servicio de Cliente
+   *
+   * */
   constructor(private _clienteService: ClienteService) { 
   }
+  /**
+  * Metodo que ejecuta otros metodos al correr la aplicación
+  * */
   ngOnInit(): void {
     this.cargarClientes();
   }
 
-
+  /**
+  * Metodo que carga los clientes que existen en el servicio y las muestra en la tabla
+  * */
   cargarClientes(){
     this.listClientes = this._clienteService.getClient();
     this.dataSource = new MatTableDataSource(this.listClientes)
   }
-
+  /**
+   * Metodo para realizar la busqueda por nombre de los elementos de la tabla
+  * */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
+  /**
+   * Metodo para realizar el ordenamiento de la tabla
+  * */
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
 
+
+  /**
+  * Metodo que crea el reporte de Mora en un formato pdf
+  * @param index indice del cliente al que se le desea generar el reporte
+  *
+  * */
   crearReporte(index: number){
     const doc = new jsPDF();
     console.log("Se creo el reporte de: " + index);

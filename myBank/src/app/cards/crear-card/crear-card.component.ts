@@ -11,6 +11,11 @@ import { CardService } from 'src/app/services/card.service';
   templateUrl: './crear-card.component.html',
   styleUrls: ['./crear-card.component.css']
 })
+
+/**
+ * Clase para el componente de Crear Tarjeta
+ * @author Carmen Araya
+ * */
 export class CrearCardComponent implements OnInit {
 
   tipo: any[] = ['Credito', 'Debito' ]
@@ -18,6 +23,13 @@ export class CrearCardComponent implements OnInit {
   titulo = "Agregar nueva Tarjeta";
   id: string | null;
 
+  /**
+   * Metodo que constructor de la clase
+   * @param FormBuilder formulario para crear un elemento
+   * @param CardService Servicio de la Tarjeta
+   * @param router 
+   * @param ActivatedRoute 
+   * */
   constructor(private fb: FormBuilder, 
     private _cardService: CardService,
     private router: Router,
@@ -32,10 +44,16 @@ export class CrearCardComponent implements OnInit {
     this.id = this.aRoute.snapshot.paramMap.get("codigo");
    }
 
+  /**
+  * Metodo que ejecuta otros metodos al correr la aplicación
+  * */
   ngOnInit(): void {
     this.esEditar();
   }
 
+  /**
+  * Metodo que ejecuta la accion editar o agregar segun una condicin
+  * */
   agregarEditarTarjeta(){
     if (this.id == null){
       this.agregarCard();
@@ -44,6 +62,10 @@ export class CrearCardComponent implements OnInit {
     }
   }
 
+  
+  /**
+  * Metodo que agrega una tarjeta nueva al servicio y la carga en la tabla
+  * */
   agregarCard(){
     if(this.form.invalid){
       return;
@@ -58,6 +80,10 @@ export class CrearCardComponent implements OnInit {
     this._cardService.agregarCard(tarjeta);
     this.router.navigate(['/cards']);
   }
+
+  /**
+  * Metodo que edita una tarjeta en el servicio y la actuliza en la tabla
+  * */ 
   editarTarjeta(){
     const tarjeta: Tarjeta = {
       numero: this.form.value.numero,
@@ -69,7 +95,9 @@ export class CrearCardComponent implements OnInit {
     this._cardService.editarTarjeta(tarjeta);
     this.router.navigate(['/cards']);
   }
-
+  /**
+  * Metodo que obtiene los datos de una cuenta editada
+  * */
   esEditar(){
     if(this.id != null){
       this.titulo = "Editar Tarjeta"
