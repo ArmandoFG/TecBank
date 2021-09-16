@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hrlds\\Documents\\GitHub\\Pruebas bien prronas\\Administracion.BackEnd\\Administracion.BackEnd.csproj": {}
+    "D:\\Universidad\\Bases de Datos\\Tarea 1\\TecBank\\Administracion.BackEnd\\Administracion.BackEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hrlds\\Documents\\GitHub\\Pruebas bien prronas\\Administracion.BackEnd\\Administracion.BackEnd.csproj": {
+    "D:\\Universidad\\Bases de Datos\\Tarea 1\\TecBank\\Administracion.BackEnd\\Administracion.BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hrlds\\Documents\\GitHub\\Pruebas bien prronas\\Administracion.BackEnd\\Administracion.BackEnd.csproj",
+        "projectUniqueName": "D:\\Universidad\\Bases de Datos\\Tarea 1\\TecBank\\Administracion.BackEnd\\Administracion.BackEnd.csproj",
         "projectName": "Administracion.BackEnd",
-        "projectPath": "C:\\Users\\hrlds\\Documents\\GitHub\\Pruebas bien prronas\\Administracion.BackEnd\\Administracion.BackEnd.csproj",
-        "packagesPath": "C:\\Users\\hrlds\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hrlds\\Documents\\GitHub\\Pruebas bien prronas\\Administracion.BackEnd\\obj\\",
+        "projectPath": "D:\\Universidad\\Bases de Datos\\Tarea 1\\TecBank\\Administracion.BackEnd\\Administracion.BackEnd.csproj",
+        "packagesPath": "C:\\Users\\falei\\.nuget\\packages\\",
+        "outputPath": "D:\\Universidad\\Bases de Datos\\Tarea 1\\TecBank\\Administracion.BackEnd\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hrlds\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\falei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

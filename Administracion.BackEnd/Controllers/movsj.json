@@ -1,23 +1,58 @@
 [
   {
     "Numtran": 1,
+    "Monto": 8888,
+    "Tipo": "Retiro",
+    "Descripcion": "cuentas",
+    "fecha": "11/2/2021"
+  },
+  {
+    "Numtran": 2,
     "Monto": 14141,
     "Tipo": "Retiro",
     "Descripcion": "cuentas",
-    "fecha": "11may2021"
+    "fecha": "11/3/2021"
   },
   {
     "Numtran": 3,
     "Monto": 14141,
     "Tipo": "Retiro",
     "Descripcion": "cuentas",
-    "fecha": "11may2021"
+    "fecha": "11/7/2021"
   },
   {
-    "Numtran": 3,
+    "Numtran": 4,
     "Monto": 14141,
     "Tipo": "Retiro",
     "Descripcion": "cuentas",
-    "fecha": "11may2021"
+    "fecha": "11/8/2021"
+  },
+  {
+    "Numtran": 5,
+    "Monto": 14141,
+    "Tipo": "Retiro",
+    "Descripcion": "cuentas",
+    "fecha": "11/3/2021"
+  },
+  {
+    "Numtran": 6,
+    "Monto": 14141,
+    "Tipo": "Retiro",
+    "Descripcion": "cuentas",
+    "fecha": "11/2/2021"
+  },
+  {
+    "Numtran": 11,
+    "Monto": 5550,
+    "Tipo": "Retiro",
+    "Descripcion": "cuentas",
+    "fecha": "12/2/2021"
+  },
+  {
+    "Numtran": 15,
+    "Monto": 25000,
+    "Tipo": "Retiro",
+    "Descripcion": "Pago de compras",
+    "fecha": "15/9/2021"
   }
 ]
