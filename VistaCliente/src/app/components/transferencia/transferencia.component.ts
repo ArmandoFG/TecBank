@@ -1,7 +1,11 @@
 import { isFakeTouchstartFromScreenReader } from '@angular/cdk/a11y';
 import { Component, OnInit } from '@angular/core';
 import { PeticionCuenta } from 'src/app/services/peticioncuenta.service';
-
+/**
+  * @fileoverview Permite realizar transferencias por
+  * el usuario, contiene un form
+  * @author Fatima Leiva
+  */
 
 @Component({
   selector: 'transferencia',
@@ -10,25 +14,32 @@ import { PeticionCuenta } from 'src/app/services/peticioncuenta.service';
   providers: [PeticionCuenta]
 })
 export class TransferenciaComponent implements OnInit {
+  /**Variables donde se almacenan valores de interfaz */
   public inputValue:any;
   public inputValue2:any;
   public selectedOption: any;
   public printedOption: any;
+
+  /**Valores donde se almacenan valores de una transaccion
+   * para el post
+   */
   public new_transaction:any;
   public transaction_num: any;
   public fecha:any;
   public transaction_date:any;
   public transaction_monto:any;
 
+  /**Opciones de tipo de pago */
   options = [
     { name: "Colones", value: 1 },
     { name: "Dolares", value: 2 },
     { name: "Euros", value: 2 }
   ]
-
+  /**@constructor */
   constructor(
     private _peticionesService: PeticionCuenta
   ) {
+    /**Se inicializa la estructura que llevara el json por enviar */
     this.new_transaction={
       "numtran": "",
         "monto": "",
@@ -37,6 +48,10 @@ export class TransferenciaComponent implements OnInit {
         "fecha": ""
     }
     this.transaction_num=15;
+
+    /**Se obtiene automaticamente la fecha en tiempo real en que
+     * se hace la transaccion
+     */
     this.fecha= new Date();
     const tiempoTranscurrido = Date.now();
     const hoy = new Date(tiempoTranscurrido);
@@ -47,7 +62,11 @@ export class TransferenciaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  /**
+   * Se activa cuando se presiona el boton para hacer
+   * la transaccion, guarda la informacion de la interfaz 
+   * y llama la funcion para hacer post
+   */
   submitInfo(){
     this.printedOption = this.selectedOption;
     this.new_transaction.numtran=this.transaction_num;
@@ -64,7 +83,7 @@ export class TransferenciaComponent implements OnInit {
     console.log(this.new_transaction);
     this.hacerPost();
   }
-
+  /** Se envía la informacion de la transferencia al API */
   hacerPost(){
     this._peticionesService.postMovimiento(this.new_transaction).subscribe(
       response => {
@@ -78,6 +97,9 @@ export class TransferenciaComponent implements OnInit {
     );
 
   }
+  /**Funciones para guardar los valores que se 
+   * encuentran en los inputs
+   */
   onKey(event:any) {this.inputValue = event.target.value;}
   onKey2(event:any) {this.inputValue2 = event.target.value;}
   
