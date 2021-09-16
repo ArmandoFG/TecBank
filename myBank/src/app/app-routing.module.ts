@@ -9,6 +9,7 @@ import { CrearClienteComponent } from './clients/crear-cliente/crear-cliente.com
 import { MoraComponent } from './mora/mora.component';
 import { CrearRolComponent } from './roles/crear-rol/crear-rol.component';
 import { RolesComponent } from './roles/roles.component';
+import { RetiroDepositoComponent } from './accounts/retiro-deposito/retiro-deposito.component';
 
 const routes: Routes = [
   {path: 'cards', component:CardsComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: 'crear-card', component: CrearCardComponent},
   {path: 'edit-card/:codigo', component: CrearCardComponent},
   {path: 'crear-account', component: CrearAccountComponent},
-  {path: 'edit-account/:numero', component: CrearAccountComponent}
+  {path: 'edit-account/:numero', component: CrearAccountComponent},
+  {path: 'app-retiro-deposito', component: RetiroDepositoComponent}
 ];
 
 @NgModule({

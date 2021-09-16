@@ -1,1 +1,41 @@
-<p>retiro-deposito works!</p>
+<div class="container">
+    <mat-toolbar>
+        <span> Retiros y Deposito</span>
+    </mat-toolbar>
+
+
+    <mat-card>
+        <H2>RETIRO</H2>
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Numero de Cuenta Para Retirar</mat-label>
+              <input matInput placeholder="CR000100010001" >
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Monto a Retirar</mat-label>
+              <input matInput placeholder="5000">
+            </mat-form-field>
+          </form>
+
+          <button mat-raised-button color="primary" routerLink="/accounts">HACER RETIRO</button>
+    </mat-card>
+
+    <mat-card>
+        <H2>DEPOSITO</H2>
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Numero de Cuenta Para Depositar</mat-label>
+              <input matInput placeholder="CR000100010001" >
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Monto a Depositar</mat-label>
+              <input matInput placeholder="5000">
+            </mat-form-field>
+          </form>
+
+          <button mat-raised-button color="primary" routerLink="/accounts">HACER DEPOSITO</button>
+    </mat-card>
+
+</div>    
