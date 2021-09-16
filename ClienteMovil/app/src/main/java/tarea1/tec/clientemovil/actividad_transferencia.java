@@ -33,7 +33,8 @@ public class actividad_transferencia extends AppCompatActivity {
     Button btnTrans;
     EditText TextMonto;
     EditText TextDetalle;
-    int nTrans = 0;
+    int nTrans = 9;
+    static String BASEURL = "http://192.168.1.3:8081/";
 
     /**
      * Metodo que inicializa la actividad, es decir, la interfaz
@@ -70,7 +71,7 @@ public class actividad_transferencia extends AppCompatActivity {
      * */
     public void send(int monto, String detalle)
     {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.5:8081/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASEURL)
                 .addConverterFactory(GsonConverterFactory.create()).build();
         UnMovimientoAPI UnmovimientoAPI=retrofit.create(UnMovimientoAPI.class);
 

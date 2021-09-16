@@ -35,6 +35,7 @@ public class actividad_movimientos extends AppCompatActivity {
     Button btnmovs;
     Button btnconsulta;
     EditText consultaId;
+    static String BASEURL = "http://192.168.1.3:8081/";
 
     /**
      * Metodo que inicializa la actividad, es decir, la interfaz
@@ -89,7 +90,7 @@ public class actividad_movimientos extends AppCompatActivity {
      * */
     private void movimiento(String id)
     {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.5:8081/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASEURL)
                 //Retrofit retrofit = new Retrofit.Builder().baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
@@ -136,7 +137,7 @@ public class actividad_movimientos extends AppCompatActivity {
      * */
     private void find()
     {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.5:8081/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASEURL)
         //Retrofit retrofit = new Retrofit.Builder().baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
